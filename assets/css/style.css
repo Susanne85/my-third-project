@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root {
+    --textPink: rgb(193, 28, 214);
+    --imgWidth: 40vh;
+    --imgHeight: 40vh;
+    --companyWidth:90vh;
+    --companyHeight: 60vh;
+    --applicationsWidth:90vh;
+}
+
+header {
+    display:inline-block;
+    color:var(--textPink);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 20px;
+    width:100%;
+    background-color: #2a607c;
+}
+
+header p {
+    color: white;
+    display:inline-block;
+}
+
+nav {
+    display:inline-block;
+    font-size: 20px;
+    text-align: left;
+}
+
+nav ul {
+    float:right;
+    
+}
+nav ul li {
+    display:inline-block;
+    margin-left:20px;
+}
+
+nav a {
+    color: white;
+}
+
+applications a{
+    color:black;
+}
+
+#portfolio p{
+    color: black;
+}
+
+main {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+.company {
+    display:flex;
+    width:80%;
+    flex-direction:row;
+}
+
+.company p{
+    display:inline-flex;
+    flex:1 1 auto;
+    align-items:center;
+    flex-wrap: wrap;
+    font-size:1.5rem;
+    margin-left:10px;
+}
+
+.card {
+    position:relative;
+    display:block;
+    width:var(--companyWidth);
+}
+
+.card .img-top {
+    position:absolute;
+    display:none;
+    width:var(--companyWidth);
+    height:var(--companyHeight);
+    top:0;
+    left:0;
+    z-index: 99;
+
+}
+
+.card:hover .img-top{
+    display:block;
+}
+
+img {
+    width:var(--companyWidth);
+    height:var(--companyHeight);
+}
+
+.applications {
+    display:flex;
+    flex-direction:column;
+    width:var(--applicationsWidth);
+    border: dashed black;
+    margin:1.5%;
+    padding:1%;
+}
+
+.applicationsList ul{
+    margin-left:30px;
+}
+.applications a{
+    color:var(--textPink);
+    font-size:1.5rem;
+}
+
+h1 {
+    font-size: 48px;
+    color:var(--textPink);
+    text-align: centre;
+}
+
+h2{
+    color:var(--textPink);
+    text-align: left;
+}
+
+h3 {
+    Margin-top:10px;
+    margin-bottom:10px;
+}
+
+a img{
+    width:var(--imgWidth);
+    height:var(--imgHeight);
+}
+
+.aboutMe {
+    width:var(--imgWidth);
+    height:var(--imgHeight);
+}
+
+.secondProject {
+    width:var(--imgWidth);
+    height:var(--imgHeight);
+}
+
+ul {
+    margin-left:20px;
+}
+
+a{
+    margin-left:10px;
+}
+a:hover {
+    color:black;
+}
+
+footer {
+    width:100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #2a607c;
+}
+
+.icons {
+    display:flex;
+}
+
+.icons li{
+    flex-direction:row;
+    list-style-type: none;
+    margin-top:15px;
+    font-size:2rem;
+}
+
+.icons li a {
+    justify-content: space-evenly;
+    color:white;
+}
+
+.fa-facebook { 
+    list-style-type: none;
+    margin-right:22px; 
+} 
+.fa-linkedin{
+    list-style-type: none;
+    margin-right:15px; 
+}
+.fa-twitter {
+    list-style-type: none;
+    margin-right:15px; 
+}
+.fa-instagram {
+    list-style-type: none;
+    margin-right:15px; 
+}
+.fa-envelope-o {
+    margin-right:10px; 
+}
+
+@keyframes example {
+    from {background-color:yellow;}
+    to {background-color:green;}  
+}
+.effects {
+    color: var(--textPink);
+    font-size: 20px;
+    font-style: italic;
+    animation-name: example;
+    animation-duration: 6s;
+}
+
+
+@media screen and (min-width: 410px) {
+    nav {
+        font-size:18px;
+    }
+    nav ul li{
+        margin-left:0;
+    }
+
+    .applications {
+        --applicationsWidth:50vh;
+        width:var(--applicationsWidth);
+        --imgWidth:30vh;
+        --imgHeight:30vh;
+    }
+
+    .company {
+        --companyWidth:40vh;
+        --companyHeight:40vh;
+        width:var(--companyWidth);
+        --imgWidth:30vh;
+        --imgHeight:30vh;
+    }
+
+    .company p{
+        font-size:1rem;
+    }
+
+    .icons li{
+        font-size:1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .applications {
+        --applicationsWidth:70vh;
+        width:var(--applicationsWidth);
+        --imgWidth:30vh;
+        --imgHeight:30vh;
+    }
+
+    .company {
+        --companyWidth:70vh;
+        --companyHeight:40vh;
+        width:var(--companyWidth);
+        --imgWidth:30vh;
+        --imgHeight:30vh;
+    }
+
+    .icons li{
+        font-size:2rem;
+    }
+}
