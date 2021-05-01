@@ -126,7 +126,7 @@ h1 {
 
 h2{
     color:var(--textPink);
-    text-align: left;
+    text-align: centre;
 }
 
 h3 {
@@ -169,13 +169,13 @@ footer {
 
 .icons {
     display:flex;
+    justify-content: space-evenly;
 }
 
 .icons li{
     flex-direction:row;
     list-style-type: none;
     margin-top:15px;
-    font-size:2rem;
 }
 
 .icons li a {
@@ -265,6 +265,6 @@ footer {
     }
 
     .icons li{
-        font-size:2rem;
+        font-size:1.5rem;
     }
 }
